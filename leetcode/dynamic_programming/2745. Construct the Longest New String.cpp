@@ -10,6 +10,7 @@ public:
         // f[i + 1][j][k][0] = max(f[i][j][k][1], f[i][j][k][2]) + 2
         // f[i][j + 1][k][1] = f[i][j][k][0] + 2
         // f[i][j][k + 1][2] = f[i][j][k][1] + 2
+        // TC : O(x * y * z), SC : O(x * y * z)
 
         vector f(x + 2, vector(y + 2, vector<array<bool, 3>>(z + 2, {false, false, false})));
         ranges::fill(f[0][0][0], true);
